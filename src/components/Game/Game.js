@@ -13,13 +13,17 @@ console.info({ answer });
 function Game() {
   const [wordList, setWordList] = React.useState([]);
   function addWord(word) {
+    // if (wordList.length >= NUM_OF_GUESSES_ALLOWED) {
+    //   window.alert('You already reach the limit.');
+    //   return;
+    // }
     const nextWorList = [...wordList];
     nextWorList.push({ word, id: Math.random() });
     setWordList(nextWorList);
   }
   return (
     <>
-      <GuessList wordList={wordList} />
+      <GuessList wordList={wordList}></GuessList>
       <GuessInput addWord={addWord} />
     </>
   );

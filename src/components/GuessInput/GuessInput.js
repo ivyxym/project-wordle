@@ -10,7 +10,6 @@ function GuessInput({ addWord }) {
       return;
     }
     addWord(guessInput);
-    console.log({ guessInput });
     setGuessInput('');
   }
 
